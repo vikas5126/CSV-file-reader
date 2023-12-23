@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    ::-webkit-scrollbar{
+        display: none;
+    }
+}
+#head{
+    background-color: lightblue;
+    /* border-bottom: 2px solid black; */
+}
+#head th{
+    height: 2rem;
+    text-transform: uppercase;
+}
+#body td{
+    text-align: center;
+    height: 2rem;
+    
+}
+#body td a{
+    text-decoration: none;
+    color: rgb(48, 48, 192);
+    font-size: 1.1rem;
+}
+
+#body tr:nth-child(odd){
+    background-color: beige;
+}
+#body tr:nth-child(even){
+    background-color: white;
+}
+
+#page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 3rem;
+}
+#dis{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}

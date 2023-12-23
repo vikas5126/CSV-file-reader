@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    ::-webkit-scrollbar{
+        display: none;
+    }
+}
+
+#form{
+    border: 1px solid black;
+    height: 10rem;
+    width: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 5rem;
+}
+#form p{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+
+}
+#form button {
+    height: 2rem;
+    width: 8rem;
+    background-color: #ff3c3c;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+}
+#nofile{
+    text-align: center;
+    text-transform: capitalize;
+    margin-top: 4rem;
+}
+#head{
+    background-color: lightblue;
+    /* border-bottom: 2px solid black; */
+}
+#head th{
+    height: 2rem;
+    text-transform: uppercase;
+}
+#body td{
+    text-align: center;
+    height: 2rem;
+    
+}
+#body td a{
+    text-decoration: none;
+    color: rgb(48, 48, 192);
+    font-size: 1.1rem;
+}
+
+#body tr:nth-child(odd){
+    background-color: beige;
+}
+#body tr:nth-child(even){
+    background-color: white;
+}

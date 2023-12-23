@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="/css/home.css">
+
+<form action="/submit" method="POST" id="form" enctype="multipart/form-data">
+    <p>Choose Any CSV File</p>
+    <div>
+        <input name="file" type="file" accept=".csv" value="Upload File">
+        <button type="submit">Submit</button>
+    </div>
+</form>
+<%if(files.length == 0){ %>
+    <h2 id="nofile">there is no such file</h2>
+<%}else {%>
+<table style="width: 100%; margin-top: 2rem;">
+    <thead id="head">
+        <tr>
+           <th>Name</th>
+           <th>Time</th>
+           <th>View</th>
+           <th>Delete</th>
+        </tr>
+   </thead>
+   <tbody id="body" style="margin-top: 2rem;">
+    <%if(files.length>0){ %>
+        <% for(file of files){ %>
+            <tr>
+                <td><%=file.originalName%></td>
+                <td><%=file.createdAt%></td>
+                <td>
+                    <a href="/show/?file_id=<%= file._id %>&page=1">View <i class="fa-solid fa-eye" style="color: #3b69ba; font-size: 0.8rem;"></i></a>
+                </td>
+                <td >
+                    <a href="/delete/<%=file.file%>" style="color: red;">Delete <i class="fa-solid fa-trash" style="color: red; font-size: 0.8rem;"></i></a>
+                </td>
+            </tr>
+        <% } %>
+    <% } %>
+   </tbody>
+</table>
+<% } %>
+
+<script src="../jquery-3.7.0.js"></script>

@@ -89,11 +89,13 @@ This code follows MVC pattern and hence everything is differentiated and well ma
     Upload-CSV
         |-----assets
         |       |--- css
-        |            |-- header.css
-        |            |-- home.css
-        |            |-- view.css
-        |           
-        |       
+        |       |    |-- header.css
+        |       |    |-- home.css
+        |       |    |-- view.css
+        |       |
+        |       |--- js   
+        |            |-- file.js
+        |             
         |------ config
         |         └--- mongoose.js
         |------ controller

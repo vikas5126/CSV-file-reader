@@ -5,8 +5,26 @@
         display: none;
     }
 }
+#header{
+    background-color: bisque;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    align-items: center;
+    width:99vw;
+    height: 4rem;
+    margin: auto;
+    position: sticky;
+    top: 0rem;
+}
+#header p{
+    font-size: 2rem;
+}
 #head{
     background-color: lightblue;
+    position: sticky;
+    top: 4.1rem;
     /* border-bottom: 2px solid black; */
 }
 #head th{
@@ -41,4 +59,20 @@
 #dis{
     margin-left: 1rem;
     margin-right: 1rem;
+}
+#searchbox{
+    display: flex;
+    width: 40%;
+    justify-content: space-evenly;
+}
+#searchbox input{
+    border: none;
+    border-radius: 10px;
+    width: 17rem;
+    padding-left: 1rem;
+}
+#searchTagBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

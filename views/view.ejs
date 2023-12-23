@@ -1,11 +1,27 @@
 <link rel="stylesheet" href="/css/view.css">
-<table style="width: 100%;">
+<div id="header">
+    <p>CSV File Converter</p>
+    <div id="searchbox">
+        <input type="text" id="search" name="search" onkeyup="find()" placeholder="Enter Text">
+        <div id="searchTagBox">
+            <p style="font-size: 1rem;">Search With Tag</p>
+            <select name="input" id="input">
+                <%for(let i=0; i<head.length; i++){ %>
+                    <option value="<%=i%>"><%=head[i]%></option>
+                <%}%>
+            </select>
+        </div>
+    </div>
+</div>
+<table style="width: 100%;" id="table">
     <thead id="head">
-        <tr>
-            <%for(let i=0; i<head.length; i++){ %>
-            <th><%=head[i]%></th>
-            <%}%>
-        </tr>
+        <div id="tablehead">
+            <tr>
+                <%for(let i=0; i<head.length; i++){ %>
+                <th><%=head[i]%></th>
+                <%}%>
+            </tr>
+        </div>
     </thead>
     <tbody id="body">
         <%for(let j=0; j<data.length; j++){%>
@@ -28,3 +44,4 @@
         <i class="fa-solid fa-caret-right"></i>
     </a></div>
 </div>
+<script src="/js/file.js"></script>
